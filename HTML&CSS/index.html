@@ -8,19 +8,22 @@
     <link rel='stylesheet' type='text/css' media='screen' href='stylesheet.css'>
 </head>
 <body>
-    <div>
+    <div class="one">
         <h1>
             Where to next?
         </h1>
-        <table id= "one">
-            <td>
+        <div class= "two">
+            
                 <form action="submit_page.html" target="blank" method="GET">
                     <input id="return" type="radio" name="request" value="return" checked><label for="return" id="click">Return </label>
                     <input id="one_way" type="radio" name="request" value="one_way"><label for="one_way" id="click">One way </label>
                     <input id="multi-city" type="radio" name="request" value="multi-city"><label for="multi-city" id="click">Multi-city </label>
                     <p id= "map"><a href="https://www.google.com/maps/@6.5732608,3.3456128,12z"> Map </a> </p>
-        <table>
-            <tr>
+                </form>
+                <p></p>
+        <table style="display: table; border-collapse: separate; border-spacing: 2px; width: 100%;">
+            <form action="submit_page.html" target="blank" method="GET">
+            <tr style="display: table-row; width: 100%;">
                 <th><label for="country_fro">Form </label> <br> <input id="country_fro" type="text" name="from" value="Lagos(LOS)" placeholder="Country, city or airport" required></th>
                 <th><label for="country_to">To </label> <br> <input id="country_to" type="text" title="" name="to" placeholder="Country, city or airport" required></th>
                 <th><label for="depart">Depart </label> <br> <input id="depart" type="date" title="Departure date" name="depart" value="date" required></th>
@@ -40,24 +43,26 @@
                     <option value="11">2 Travellers, First class</option>
                     <option value="12">3 Travellers, First class</option>
                 </select></th>
-            <tr>
+            </tr>
+            <tr style="display: table-row; width: 100%;">
                 <td><input id="nearby_airport_fro" type="checkbox" name="nearby_airport_fro" value="yes" checked><label for="nearby_airport_fro" id="click"> add nearby airports</label></td>
                 <td><input id="nearby_airport_to" type="checkbox" name="nearby_airport_to" value="yes"><label for="nearby_airport_to" id="click"> add nearby airports</label></td>
                 <td> </td>
                 <td> </td>
                 <td><input id="submit" type="submit" value=" Search flights &#8680"></td>
             </tr>
-            <tr>
+            <tr style="display: table-row; width: 100%;">
                 <td>
                     <input id="direct_flight" type="checkbox" name="direct_flight" value="yes"><label for="direct_flight" id="click"> Direct flights only</label>
                 </td>
             </tr>         
-            </tr>
+            
+            </form>
         </table>
                     
-                </form>
-            </td>
-        </table>
+                
+        
+        </div>
 
     </div>
 </body>
