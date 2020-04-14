@@ -4,7 +4,7 @@ body{
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
 }
-div{
+div.one{
     background: url(https://int.sydney.com/sites/international/files/styles/header_slider/public/2016-12/Bondi-Beach-Sunrise-DNSW.jpg?itok=2Xl-k7Kz);
     background-repeat: no-repeat;
     height: 650px;
@@ -19,7 +19,7 @@ div h2{
         font-size: 40px;
         text-align: center;
 }
-div #one{
+div.two{
     background-color: #0B132B;
     margin-left: 13.5%;
     margin-right: 13.5%;
@@ -32,14 +32,19 @@ div #one{
 #map {
     float: right;
     cursor: pointer;
-  }
+}
 a{
     color: white;
     text-decoration: none;
 }
 th{
-    text-align: start;
-    padding: 0%;
+    display: table-cell;
+    text-align: justify;
+    padding: 0px;}
+td{
+    display: table-cell;
+    text-align: justify;
+    padding: 0px;
 }
 input[type=radio]{
     border: 0px;
@@ -56,29 +61,31 @@ input[type=checkbox]{
 input[type=text]{
     border: 0px;
     height: 40px;
-    width: 250px;
-    border-radius: 3px;
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 input[type=date]{
     border: 0px;
     height: 40px;
-    width: 150px;
-    border-radius: 3px;
+    width: 100%;
+    
     cursor: pointer;
     text-align: center;
 }
 #selection{
     border: 0px;
     height: 40px;
-    width: 250px;
-    border-radius: 3px;
+    width: 100%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     cursor: pointer;
 }
 #submit{
     background-color: #3cb371;
     border: 0px;
     height: 40px;
-    width: 230px;
+    width: 80%;
     margin-top: 5%;
     color: white;
     font-size: 1.5em;
