@@ -12,58 +12,71 @@
         <h1>
             Where to next?
         </h1>
-        <div class= "two">
-            
-                <form action="submit_page.html" target="blank" method="GET">
-                    <input id="return" type="radio" name="request" value="return" checked><label for="return" id="click">Return </label>
-                    <input id="one_way" type="radio" name="request" value="one_way"><label for="one_way" id="click">One way </label>
-                    <input id="multi-city" type="radio" name="request" value="multi-city"><label for="multi-city" id="click">Multi-city </label>
-                    <p id= "map"><a href="https://www.google.com/maps/@6.5732608,3.3456128,12z"> Map </a> </p>
-                </form>
-                <p></p>
-        <table style="display: table; border-collapse: separate; border-spacing: 2px; width: 100%;">
+        <div class="two">
             <form action="submit_page.html" target="blank" method="GET">
-            <tr style="display: table-row; width: 100%;">
-                <th><label for="country_fro">Form </label> <br> <input id="country_fro" type="text" name="from" value="Lagos(LOS)" placeholder="Country, city or airport" required></th>
-                <th><label for="country_to">To </label> <br> <input id="country_to" type="text" title="" name="to" placeholder="Country, city or airport" required></th>
-                <th><label for="depart">Depart </label> <br> <input id="depart" type="date" title="Departure date" name="depart" value="date" required></th>
-                <th><label for="return">Return </label> <br> <input id="return" type="date" title="Return date" name="return" value="date" required></th>
-                <th><label for="selection">Cabin Class & Travellers </label> <br> <select id="selection" name="selection" required>
-                    <option value=" " selected disabled hidden>Traveller(s), Class</option>
-                    <option value="1">1 Traveller, Economy </option>
-                    <option value="2">2 Travellers, Economy</option>
-                    <option value="3">3 Travellers, Economy </option>
-                    <option value="4">1 Traveller, Premium Economy</option>
-                    <option value="5">2 Travellers, Premium Economy</option>
-                    <option value="6">3 Travellers, Premium Economy</option>
-                    <option value="7">1 Traveller, Business class</option>
-                    <option value="8">2 Travellers, Business class</option>
-                    <option value="9">3 Travellers, Business class</option>
-                    <option value="10">1 Traveller, First class</option>
-                    <option value="11">2 Travellers, First class</option>
-                    <option value="12">3 Travellers, First class</option>
-                </select></th>
-            </tr>
-            <tr style="display: table-row; width: 100%;">
-                <td><input id="nearby_airport_fro" type="checkbox" name="nearby_airport_fro" value="yes" checked><label for="nearby_airport_fro" id="click"> add nearby airports</label></td>
-                <td><input id="nearby_airport_to" type="checkbox" name="nearby_airport_to" value="yes"><label for="nearby_airport_to" id="click"> add nearby airports</label></td>
-                <td> </td>
-                <td> </td>
-                <td><input id="submit" type="submit" value=" Search flights &#8680"></td>
-            </tr>
-            <tr style="display: table-row; width: 100%;">
-                <td>
-                    <input id="direct_flight" type="checkbox" name="direct_flight" value="yes"><label for="direct_flight" id="click"> Direct flights only</label>
-                </td>
-            </tr>         
-            
+                <input id="return" type="radio" name="request" value="return" checked><label for="return" id="click"> Return </label>
+                <input id="one_way" type="radio" name="request" value="one_way"><label for="one_way" id="click"> One way </label>
+                <input id="multi-city" type="radio" name="request" value="multi-city"><label for="multi-city" id="click"> Multi-city </label>
+                <a href="https://www.google.com/maps/@6.5732608,3.3456128,12z"> Map </a>
             </form>
-        </table>
-                    
-                
-        
+            <br>
+                <form class="container" action="submit_page.html" target="blank" method="GET">
+                <div>
+                    <label id="block" style="font-size: small;" for="country_fro">Form </label> <br>
+                    <input id="country_fro" type="text" onfocus="this.value=''" title="" name="from" value="Lagos(LOS)" placeholder="Country, city or airport" required><br>
+                    <label style="font-size: small;" for="nearby_airport_fro" id="click">
+                    <input id="nearby_airport_fro" style="margin-top: 5%; margin-bottom: 10px;" type="checkbox" name="nearby_airport_fro" value="yes" checked>
+                    Add nearby airports</label>
+                </div>
+                <div>
+                    <br>
+                    <input id="arrow" type="submit" onfocus="this.value='&#8652'" value="&#8652">
+                </div>
+                <div>
+                    <label id="block" style="font-size: small;" for="country_to">To </label> <br>
+                    <input id="country_to" type="text" title="" name="to" placeholder="Country, city or airport" required><br>
+                    <label style="font-size: small;" for="nearby_airport_to" id="click">
+                    <input id="nearby_airport_to" style="margin-top: 5%; margin-bottom: 10px;" type="checkbox" name="nearby_airport_to" value="yes">
+                    Add nearby airports</label>
+                </div>
+                <div>
+                    <label id="block" style="font-size: small;" for="depart">Depart </label> <br>
+                    <input id="depart" type="date" title="Departure date" name="depart" value="date" required>
+                </div>
+                <div>
+                    <label id="block" style="font-size: small;" for="return">Return </label> <br>
+                    <input id="return" type="date" title="Return date" name="return" value="date" required>
+                </div>
+                <div>
+                    <label id="block" style="font-size: small;" for="selection">Cabin Class & Travellers </label> <br>
+                    <select id="selection" name="selection" required>
+                        <option value=" " selected disabled hidden>Traveller(s), Class</option>
+                        <option value="1">1 Traveller, Economy </option>
+                        <option value="2">2 Travellers, Economy</option>
+                        <option value="3">3 Travellers, Economy </option>
+                        <option value="4">1 Traveller, Premium Economy</option>
+                        <option value="5">2 Travellers, Premium Economy</option>
+                        <option value="6">3 Travellers, Premium Economy</option>
+                        <option value="7">1 Traveller, Business class</option>
+                        <option value="8">2 Travellers, Business class</option>
+                        <option value="9">3 Travellers, Business class</option>
+                        <option value="10">1 Traveller, First class</option>
+                        <option value="11">2 Travellers, First class</option>
+                        <option value="12">3 Travellers, First class</option>
+                    </select>  
+                </div>
+                <span class="clear"></span>
+                <div>
+                    <label style="font-size: small;" for="direct_flight" id="click">
+                    <input id="direct_flight" style="margin-top: 5%;" type="checkbox" name="direct_flight" value="yes">
+                    Direct flights only</label>
+                </div>
+                <div style="float: right;">
+                    <input id="submit" type="submit" value="Search flights &#8680">
+                </div>
+                </form>
+            
         </div>
-
     </div>
 </body>
 </html>
