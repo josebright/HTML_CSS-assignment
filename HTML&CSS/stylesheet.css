@@ -108,11 +108,12 @@ input[type=date]{
     font-size: x-large;
     border-radius: 4px;
     text-align: center;
-    margin-top: 10%;
+    margin: 0px;
     cursor: pointer;
 }
 #submit:hover{
     background-color: #154d2e;
+    border: 0px;
 }
 .clear{
     clear: both;
