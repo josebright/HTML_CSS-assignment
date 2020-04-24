@@ -8,48 +8,51 @@
     <link rel='stylesheet' type='text/css' media='screen' href='stylesheet.css'>
 </head>
 <body>
-    <div class="one">
+
+    <div class="layer">
         <h1>
             Where to next?
         </h1>
-        <div class="two">
+        <div class="wrap">
             <form action="submit_page.html" target="blank" method="GET">
-                <input id="return" type="radio" name="request" value="return" checked><label for="return" id="click"> Return </label>
-                <input id="one_way" type="radio" name="request" value="one_way"><label for="one_way" id="click"> One way </label>
-                <input id="multi-city" type="radio" name="request" value="multi-city"><label for="multi-city" id="click"> Multi-city </label>
-                <a href="https://www.google.com/maps/@6.5732608,3.3456128,12z"> Map </a>
-            </form>
-            <br>
-                <form class="container" action="submit_page.html" target="blank" method="GET">
-                <div>
-                    <label id="block" style="font-size: small;" for="country_fro">Form </label> <br>
-                    <input id="country_fro" type="text" onfocus="this.value=''" title="" name="from" value="Lagos(LOS)" placeholder="Country, city or airport" required><br>
-                    <label style="font-size: small;" for="nearby_airport_fro" id="click">
-                    <input id="nearby_airport_fro" style="margin-top: 5%; margin-bottom: 10px;" type="checkbox" name="nearby_airport_fro" value="yes" checked>
-                    Add nearby airports</label>
+            
+                <div class="coloumn" style="margin: 0px 0px 20px 0px;">
+                    <input id="return" type="radio" name="request" value="return" checked><label id="click" for="return"> Return </label>
+                    <input id="one_way" type="radio" name="request" value="one_way"><label id="click" for="one_way"> One way </label>
+                    <input id="multi-city" type="radio" name="request" value="multi-city"><label id="click" for="multi-city"> Multi-city </label>
+                    <a href="https://www.google.com/maps/@6.5732608,3.3456128,12z"> Map </a>
                 </div>
-                <div>
-                    <br>
-                    <input id="arrow" type="submit" onfocus="this.value='&#8652'" value="&#8652">
+            <div class="folder">
+            <div class="box1">
+                <div class="bag">
+                    <label style="font-size: small;" for="country_fro">Form </label>
+                    <input class="text tin1" type="text" onfocus="this.value=''" title="" name="from" value="Lagos(LOS)" placeholder="Country, city or airport" required>
+                    <label id="click" style="font-size: small;" for="nearby_airport_fro"><input id="nearby_airport_fro" type="checkbox" name="nearby_airport_fro" value="yes" checked>Add nearby airports</label>
                 </div>
-                <div>
-                    <label id="block" style="font-size: small;" for="country_to">To </label> <br>
-                    <input id="country_to" type="text" title="" name="to" placeholder="Country, city or airport" required><br>
-                    <label style="font-size: small;" for="nearby_airport_to" id="click">
-                    <input id="nearby_airport_to" style="margin-top: 5%; margin-bottom: 10px;" type="checkbox" name="nearby_airport_to" value="yes">
-                    Add nearby airports</label>
+                <div class="bag">
+                    <input id="arrow" type="button" onfocus="this.value='&#8652'" value="&#8652">
                 </div>
-                <div>
-                    <label id="block" style="font-size: small;" for="depart">Depart </label> <br>
-                    <input id="depart" type="date" title="Departure date" name="depart" value="date" required>
+                <div class="bag">
+                    <label style="font-size: small;" for="country_to">To </label>
+                    <input class="text tin2" type="text" title="" name="to" placeholder="Country, city or airport" required>
+                    <label id="click" style="font-size: small;" for="nearby_airport_to"><input id="nearby_airport_to" type="checkbox" name="nearby_airport_to" value="yes">Add nearby airports</label>
                 </div>
-                <div>
-                    <label id="block" style="font-size: small;" for="return">Return </label> <br>
-                    <input id="return" type="date" title="Return date" name="return" value="date" required>
+            </div>
+
+            <div class="container">
+            <div class="box2">
+                <div class="dep raw">
+                    <label style="font-size: small;" for="depart">Depart </label>
+                    <input class="date" type="date" title="Departure date" name="depart" value="mm/dd/yyyy" required>
                 </div>
-                <div>
-                    <label id="block" style="font-size: small;" for="selection">Cabin Class & Travellers </label> <br>
-                    <select id="selection" name="selection" required>
+                <div class="dep raw">
+                    <label style="font-size: small;" for="return">Return </label>
+                    <input class="date" type="date" title="Return date" name="return" value="mm/dd/yyyy" required>
+                </div>
+            </div>
+                <div class="raw sel">
+                    <label style="font-size: small;" for="selection">Class&Travellers </label>
+                    <select class="text" style="cursor: pointer;" name="selection" required>
                         <option value=" " selected disabled hidden>Traveller(s), Class</option>
                         <option value="1">1 Traveller, Economy </option>
                         <option value="2">2 Travellers, Economy</option>
@@ -63,19 +66,17 @@
                         <option value="10">1 Traveller, First class</option>
                         <option value="11">2 Travellers, First class</option>
                         <option value="12">3 Travellers, First class</option>
-                    </select>  
+                    </select>
                 </div>
-                <span class="clear"></span>
+            </div>
+            </div>
                 <div>
-                    <label style="font-size: small;" for="direct_flight" id="click">
-                    <input id="direct_flight" style="margin-top: 5%;" type="checkbox" name="direct_flight" value="yes">
-                    Direct flights only</label>
+                    <label id="click" style="font-size: small;" for="direct_flight"><input id="direct_flight" type="checkbox" name="direct_flight" value="yes">Direct flights only</label>
+                <div id="submit">
+                    <input class="text" id="submit" type="submit" value="Search flights &#8680">
                 </div>
-                <div style="float: right;">
-                    <input id="submit" type="submit" value="Search flights &#8680">
                 </div>
-                </form>
-            
+            </form>
         </div>
     </div>
 </body>
